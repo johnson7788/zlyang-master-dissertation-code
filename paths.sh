@@ -7,4 +7,4 @@ SCRIPTS_DIR=${BASE_DIR}/scripts
 SOFTWARE_DIR=${BASE_DIR}/software
 
 # replace it with your fairseq path
-FAIRSEQPY=/home/yangzl/Desktop/pycharm-projects/fairseq
+FAIRSEQPY=/Users/admin/git/fairseq-extended

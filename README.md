@@ -15,7 +15,8 @@
 1. 克隆本项目：`git clone https://github.com/swjtu-gec/zlyang-master-dissertation-code.git`
 2. 安装所需依赖：
     * [Anaconda3-4.4.0-Linux-x86_64（Python 3.6.1）](https://repo.continuum.io/archive/Anaconda3-4.4.0-Linux-x86_64.sh)
-    * [fairseq-py-extended](https://github.com/young-zonglin/fairseq-extended.git)：这是本文`fork`的`fairseq-py`，也是本项目所使用的具体版本（`fairseq 0.6.0`）。编译安装完成后，还需修改`path.sh`中的`FAIRSEQPY`，使其指向fairseq项目目录。
+    * [fairseq-py-extended](https://github.com/young-zonglin/fairseq-extended.git)：本项目`fork`自`fairseq-py`，也是本项目所使用的具体版本（`fairseq 0.6.0`）。
+      git clone https://github.com/young-zonglin/fairseq-extended  && cd faireseq-extended && python setup.py build develop 编译安装完成后，还需修改`path.sh`中的`FAIRSEQPY`，使其指向fairseq项目目录。
     * [subword-nmt](https://github.com/rsennrich/subword-nmt)：`training/preprocess_yangzl.sh`使用它训练BPE模型。
     * [nbest-reranker](https://github.com/nusnlp/nbest-reranker/)：用于重排序（本项目已包含该软件包，位于`software/`目录）；还需要安装 [KenLM](https://github.com/kpu/kenlm) Python模块，用于获取句子的LM分数；还需要安装 [Moses SMT工具包](https://github.com/moses-smt/mosesdecoder)，基于MERT算法训练重打分器。
     * [m2scorer](https://github.com/nusnlp/m2scorer)：`software/`目录下的`m2scorer/scripts/edit_creator.py`用于将平行数据转为m2格式；`eval/`目录下的`m2scorer/scripts/m2scorer.py`（本项目包含该软件包）用于计算标准性能评估指标`M^2 F_0.5`。
